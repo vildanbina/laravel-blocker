@@ -4,16 +4,11 @@
 [![Total Downloads](https://poser.pugx.org/bexvibi/laravel-blocker/d/total.svg)](https://packagist.org/packages/bexvibi/laravel-blocker)
 [![Travis-CI Build](https://travis-ci.org/bexvibi/laravel-blocker.svg?branch=master)](https://travis-ci.org/bexvibi/laravel-blocker)
 [![StyleCI](https://github.styleci.io/repos/171390607/shield?branch=master)](https://github.styleci.io/repos/171390607)
-[![Scrutinizer Build Status](https://scrutinizer-ci.com/g/bexvibi/laravel-blocker/badges/build.png?b=master)](https://scrutinizer-ci.com/g/bexvibi/laravel-blocker/build-status/master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/bexvibi/laravel-blocker/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/bexvibi/laravel-blocker/?branch=master)
 [![Latest Unstable Version](https://poser.pugx.org/bexvibi/laravel-blocker/v/unstable)](https://packagist.org/packages/bexvibi/laravel-blocker)
-[![License](https://poser.pugx.org/bexvibi/laravel-blocker/license)](https://packagist.org/packages/bexvibi/laravel-blocker)
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
-<a href="https://www.patreon.com/bePatron?u=10119959" title="Become a Patreon">
-    <img src="https://c5.patreon.com/external/logo/become_a_patron_button.png" alt="Become a Patreon" width="85px" > 
-</a>
+[![License](https://poser.pugx.org/bexvibi/laravel-blocker/license)](https://packagist.org/packages/bexvibi/laravel-blocker)
 
-#### Table of contents
 - [About](#about)
 - [Features](#features)
 - [Requirements](#requirements)
@@ -58,7 +53,7 @@ Can work out the box with or without the following roles packages:
 |Configurable blocked action|
 
 ### Requirements
-* [Laravel 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7, 5.8, 6.0+](https://laravel.com/docs/installation)
+* [Laravel 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7, or 5.8+](https://laravel.com/docs/installation)
 
 #### Required Packages
 (included in this package)
@@ -494,7 +489,8 @@ LARAVEL_BLOCKER_DEFAULT_ACTION_REDIRECT='/'
 ### License
 LaravelBlocker is licensed under the [MIT license](https://opensource.org/licenses/MIT). Enjoy!
 
-### Contributors
+## Contributors
+
 Thanks goes to these wonderful people ([emoji key](https://github.com/all-contributors/all-contributors#emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->

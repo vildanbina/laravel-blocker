@@ -2,6 +2,7 @@
 
 namespace bexvibi\LaravelBlocker\Test;
 
+use bexvibi\LaravelBlocker\LaravelBlockerFacade;
 use bexvibi\LaravelBlocker\LaravelBlockerServiceProvider;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 
