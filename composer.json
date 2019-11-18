@@ -1,0 +1,42 @@
+{
+    "name": "bexvibi/laravel-blocker",
+    "description": "",
+    "keywords": [
+            "laravel blocker",
+            "laravel IP blocker",
+            "laravel Email blocker",
+            "Email blocker",
+            "User blocker",
+            "IP blocker",
+            "Blocker"
+        ],
+    "license": "MIT",
+    "type": "package",
+    "authors": [
+        {
+            "name": "Vildan Bina",
+            "email": "bexvibi@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "eklundkristoffer/seedster": "^3.3",
+        "laravelcollective/html": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "bexvibi\\LaravelBlocker\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "bexvibi\\LaravelBlocker\\LaravelBlockerServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable"
+}
