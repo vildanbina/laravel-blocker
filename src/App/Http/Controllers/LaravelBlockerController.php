@@ -78,7 +78,7 @@ class LaravelBlockerController extends Controller
     {
         BlockedItem::create($request->blockedFillData());
 
-        return redirect('blocker')
+        return redirect('admin/blocker')
                     ->with('success', trans('laravelblocker::laravelblocker.messages.blocked-creation-success'));
     }
 
@@ -143,7 +143,7 @@ class LaravelBlockerController extends Controller
         $blockedItem = BlockedItem::findOrFail($id);
         $blockedItem->delete();
 
-        return redirect('blocker')
+        return redirect('admin/blocker')
                     ->with('success', trans('laravelblocker::laravelblocker.messages.delete-success'));
     }
 

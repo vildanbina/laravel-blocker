@@ -20,7 +20,7 @@ class LaravelBlockerDeletedController extends LaravelBlockerController
     {
         $item = BlockedItem::onlyTrashed()->where('id', $id)->get();
         if (count($item) != 1) {
-            return abort(redirect('blocker-deleted')
+            return abort(redirect('admin/blocker-deleted')
                             ->with('error', trans('laravelblocker::laravelblocker.errors.errorBlockerNotFound')));
         }
 
@@ -71,7 +71,7 @@ class LaravelBlockerDeletedController extends LaravelBlockerController
         $item = self::getDeletedBlockedItem($id);
         $item->restore();
 
-        return redirect('blocker')
+        return redirect('admin/blocker')
                     ->with('success', trans('laravelblocker::laravelblocker.messages.successRestoredItem'));
     }
 
@@ -89,7 +89,7 @@ class LaravelBlockerDeletedController extends LaravelBlockerController
             $item->restore();
         }
 
-        return redirect('blocker')
+        return redirect('admin/blocker')
                     ->with('success', trans('laravelblocker::laravelblocker.messages.successRestoredAllItems'));
     }
 
@@ -105,7 +105,7 @@ class LaravelBlockerDeletedController extends LaravelBlockerController
         $item = self::getDeletedBlockedItem($id);
         $item->forceDelete();
 
-        return redirect('blocker-deleted')
+        return redirect('admin/blocker-deleted')
                     ->with('success', trans('laravelblocker::laravelblocker.messages.successDestroyedItem'));
     }
 
@@ -124,7 +124,7 @@ class LaravelBlockerDeletedController extends LaravelBlockerController
             $item->forceDelete();
         }
 
-        return redirect('blocker')
+        return redirect('admin/blocker')
                     ->with('success', trans('laravelblocker::laravelblocker.messages.successDestroyedAllItems'));
     }
 
