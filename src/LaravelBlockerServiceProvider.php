@@ -43,7 +43,7 @@ class LaravelBlockerServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/resources/views/', $this->_packageTag);
         $this->mergeConfigFrom(__DIR__.'/config/'.$this->_packageTag.'.php', $this->_packageTag);
         $this->loadMigrationsFrom(__DIR__.'/database/migrations');
-        $this->loadSeedsFrom();
+//         $this->loadSeedsFrom();
         $this->publishFiles();
     }
 
