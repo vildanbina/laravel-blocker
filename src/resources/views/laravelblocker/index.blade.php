@@ -57,7 +57,7 @@
                                         {!! trans('laravelblocker::laravelblocker.buttons.create-new-blocked') !!}
                                     </a>
                                     @if($deletedBlockedItems->count() > 0)
-                                        <a class="dropdown-item" href="{{ url('/blocker-deleted') }}">
+                                        <a class="dropdown-item" href="{{ url('/admin/blocker-deleted') }}">
                                             <i class="fa fa-fw fa-trash-o" aria-hidden="true"></i>
                                             {!! trans('laravelblocker::laravelblocker.buttons.show-deleted-blocked') !!}
                                             <span class="badge-pill badge badge-warning">

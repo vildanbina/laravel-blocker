@@ -10,6 +10,7 @@ Route::group([
         'middleware'    => ['web', 'checkblocked'],
         'as'            => 'laravelblocker::',
         'namespace'     => 'bexvibi\LaravelBlocker\App\Http\Controllers',
+        'prefix'        => 'admin'
     ], function () {
 
     // Blocker

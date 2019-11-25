@@ -52,7 +52,7 @@
                                     </span>
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-right">
-                                    <a href="{{ url('blocker') }}" class="dropdown-item">
+                                    <a href="{{ url('admin/blocker') }}" class="dropdown-item">
                                         <i class="fa fa-fw fa-reply" aria-hidden="true"></i>
                                         {!! trans('laravelblocker::laravelblocker.buttons.back-to-blocked') !!}
                                     </a>

@@ -53,12 +53,12 @@
                             </span>
                             <div class="pull-right">
                                 @isset($typeDeleted)
-                                    <a href="{{ url('blocker-deleted') }}" class="btn btn-danger text-white btn-sm float-right" data-toggle="tooltip" data-placement="left" title="{{ trans('laravelblocker::laravelblocker.tooltips.back-blocked-deleted') }}">
+                                    <a href="{{ url('admin/blocker-deleted') }}" class="btn btn-danger text-white btn-sm float-right" data-toggle="tooltip" data-placement="left" title="{{ trans('laravelblocker::laravelblocker.tooltips.back-blocked-deleted') }}">
                                         <i class="fa fa-fw fa-reply-all" aria-hidden="true"></i>
                                         {!! trans('laravelblocker::laravelblocker.buttons.back-to-blocked-deleted') !!}
                                     </a>
                                 @else
-                                    <a href="{{ url('blocker') }}" class="btn btn-warning text-white btn-sm float-right" data-toggle="tooltip" data-placement="left" title="{{ trans('laravelblocker::laravelblocker.tooltips.back-blocked') }}">
+                                    <a href="{{ url('admin/blocker') }}" class="btn btn-warning text-white btn-sm float-right" data-toggle="tooltip" data-placement="left" title="{{ trans('laravelblocker::laravelblocker.tooltips.back-blocked') }}">
                                         <i class="fa fa-fw fa-reply-all" aria-hidden="true"></i>
                                         {!! trans('laravelblocker::laravelblocker.buttons.back-to-blocked') !!}
                                     </a>
@@ -136,7 +136,7 @@
                                 @isset($typeDeleted)
                                     @include('laravelblocker::forms.restore-item', ['restoreType' => 'full'])
                                 @else
-                                    <a class="btn btn-sm btn-info btn-block text-white" href="/blocker/{{ $item->id }}/edit" data-toggle="tooltip" title="{{ trans("laravelblocker::laravelblocker.tooltips.edit") }}">
+                                    <a class="btn btn-sm btn-info btn-block text-white" href="/admin/blocker/{{ $item->id }}/edit" data-toggle="tooltip" title="{{ trans("laravelblocker::laravelblocker.tooltips.edit") }}">
                                         {!! trans("laravelblocker::laravelblocker.buttons.edit-larger") !!}
                                     </a>
                                 @endisset
