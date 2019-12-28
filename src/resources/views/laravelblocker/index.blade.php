@@ -44,6 +44,7 @@
                             <span id="card_title">
                                 {!! trans('laravelblocker::laravelblocker.blocked-items-title') !!}
                             </span>
+                            @permission(config('permission.blocker.create') .'|'. config('permission.blocker.deleted') )
                             <div class="btn-group pull-right btn-group-xs">
                                 <button type="button" class="btn btn-warning text-white dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="fa fa-ellipsis-v fa-fw" aria-hidden="true"></i>
@@ -52,10 +53,13 @@
                                     </span>
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-right">
+                                    @permission(config('permission.blocker.create'))
                                     <a class="dropdown-item" href="{{ route('laravelblocker::blocker.create') }}">
                                         <i class="fa fa-fw fa-plus" aria-hidden="true"></i>
                                         {!! trans('laravelblocker::laravelblocker.buttons.create-new-blocked') !!}
                                     </a>
+                                    @endpermission
+                                    @permission(config('permission.blocker.deleted'))
                                     @if($deletedBlockedItems->count() > 0)
                                         <a class="dropdown-item" href="{{ url('/admin/blocker-deleted') }}">
                                             <i class="fa fa-fw fa-trash-o" aria-hidden="true"></i>
@@ -65,8 +69,10 @@
                                             </span>
                                         </a>
                                     @endif
+                                    @endpermission
                                 </div>
                             </div>
+                            @endpermission
                         </div>
                     </div>
                     <div class="{{ $containerBodyClass }}">
