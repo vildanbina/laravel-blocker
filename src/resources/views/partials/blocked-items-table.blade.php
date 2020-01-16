@@ -74,13 +74,13 @@
                     @endif
                     @if($tabletype == 'normal')
                         <td>
-                            <a class="btn btn-sm btn-info btn-block text-white" href="/admin/blocker/{{ $blockedItem->id }}" data-toggle="tooltip" title="{{ trans("laravelblocker::laravelblocker.tooltips.show") }}">
+                            <a class="btn btn-sm btn-info btn-block text-white btn-rounded" href="/admin/blocker/{{ $blockedItem->id }}" data-toggle="tooltip" title="{{ trans("laravelblocker::laravelblocker.tooltips.show") }}">
                                 {!! trans("laravelblocker::laravelblocker.buttons.show") !!}
                             </a>
                         </td>
                         @permission(config('permission.blocker.edit'))
                         <td>
-                            <a class="btn btn-sm btn-warning btn-block text-white" href="/admin/blocker/{{ $blockedItem->id }}/edit" data-toggle="tooltip" title="{{ trans("laravelblocker::laravelblocker.tooltips.edit") }}">
+                            <a class="btn btn-sm btn-warning btn-block text-white btn-rounded" href="/admin/blocker/{{ $blockedItem->id }}/edit" data-toggle="tooltip" title="{{ trans("laravelblocker::laravelblocker.tooltips.edit") }}">
                                 {!! trans("laravelblocker::laravelblocker.buttons.edit") !!}
                             </a>
                         </td>
@@ -93,7 +93,7 @@
                     @endif
                     @if($tabletype == 'deleted')
                         <td>
-                            <a class="btn btn-sm btn-info btn-block text-white" href="/admin/blocker-deleted/{{ $blockedItem->id }}" data-toggle="tooltip" title="{{ trans("laravelblocker::laravelblocker.tooltips.show") }}">
+                            <a class="btn btn-sm btn-info btn-block btn-rounded text-white btn-rounded" href="/admin/blocker-deleted/{{ $blockedItem->id }}" data-toggle="tooltip" title="{{ trans("laravelblocker::laravelblocker.tooltips.show") }}">
                                 {!! trans("laravelblocker::laravelblocker.buttons.show") !!}
                             </a>
                         </td>

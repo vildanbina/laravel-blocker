@@ -26,7 +26,7 @@
     {!! csrf_field() !!}
     {!! Form::button($itemText, [
             'type' => 'button',
-            'class' => $itemClasses,
+            'class' => $itemClasses . ' btn-rounded',
             'data-toggle' => 'modal',
             'data-target' => '#confirmRestore',
             'data-title' => trans('laravelblocker::laravelblocker.modals.resotreBlockedItemTitle'),

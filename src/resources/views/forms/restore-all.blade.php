@@ -8,7 +8,7 @@
         <i class="fa fa-fw fa-history" aria-hidden="true"></i> ' . trans_choice('laravelblocker::laravelblocker.buttons.restore-all-blocked', 1, ['count' => $blocked->count()]),
         [
             'type' => 'button',
-            'class' => 'btn dropdown-item',
+            'class' => 'btn dropdown-item btn-rounded',
             'data-toggle' => 'modal',
             'data-target' => '#confirmRestore',
             'data-title' => trans('laravelblocker::laravelblocker.modals.resotreAllBlockedTitle'),
