@@ -2,9 +2,9 @@
 
 namespace bexvibi\LaravelBlocker\App\Http\Middleware;
 
+use bexvibi\LaravelBlocker\App\Traits\LaravelCheckBlockedTrait;
 use Closure;
 use Illuminate\Http\Request;
-use bexvibi\LaravelBlocker\App\Traits\LaravelCheckBlockedTrait;
 
 class LaravelBlocker
 {
@@ -20,7 +20,7 @@ class LaravelBlocker
      */
     public function handle($request, Closure $next)
     {
-        if (config('laravelblocker.laravelBlockerEnabled')) {
+        if (settings('blockerAllowed')) {
             LaravelCheckBlockedTrait::checkBlocked();
         }
 

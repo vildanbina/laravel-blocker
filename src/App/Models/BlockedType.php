@@ -1,27 +1,40 @@
 <?php
 
-namespace bexvibi\LaravelBlocker\App\Models;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+/**
+ * App\Models\BlockedType
+ *
+ * @property int $id
+ * @property string $slug
+ * @property string $name
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property \Illuminate\Support\Carbon|null $deleted_at
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\BlockedItem[] $blockedItems
+ * @property-read int|null $blocked_items_count
+ * @method static bool|null forceDelete()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\BlockedType newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\BlockedType newQuery()
+ * @method static \Illuminate\Database\Query\Builder|\App\Models\BlockedType onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\BlockedType query()
+ * @method static bool|null restore()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\BlockedType whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\BlockedType whereDeletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\BlockedType whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\BlockedType whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\BlockedType whereSlug($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\BlockedType whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Models\BlockedType withTrashed()
+ * @method static \Illuminate\Database\Query\Builder|\App\Models\BlockedType withoutTrashed()
+ * @mixin \Eloquent
+ */
 class BlockedType extends Model
 {
     use SoftDeletes;
-
-    /**
-     * The table associated with the model.
-     *
-     * @var string
-     */
-    protected $table;
-
-    /**
-     * The connection name for the model.
-     *
-     * @var string
-     */
-    protected $connection;
 
     /**
      * Indicates if the model should be timestamped.
@@ -29,7 +42,12 @@ class BlockedType extends Model
      * @var bool
      */
     public $timestamps = true;
-
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'blocker_types';
     /**
      * The attributes that are not mass assignable.
      *
@@ -64,34 +82,6 @@ class BlockedType extends Model
         'slug' => 'string',
         'name' => 'string',
     ];
-
-    /**
-     * Create a new instance to set the table and connection.
-     *
-     * @return void
-     */
-    public function __construct($attributes = [])
-    {
-        parent::__construct($attributes);
-        $this->connection = config('laravelblocker.blockerDatabaseConnection');
-        $this->table = config('laravelblocker.blockerTypeDatabaseTable');
-    }
-
-    /**
-     * Get the database connection.
-     */
-    public function getConnectionName()
-    {
-        return $this->connection;
-    }
-
-    /**
-     * Get the database table.
-     */
-    public function getTableName()
-    {
-        return $this->table;
-    }
 
     /**
      * Get the blockedItems for the BlockedType.
