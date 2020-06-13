@@ -21,7 +21,7 @@
     "require": {
         "php": ">=7.0.0",
         "eklundkristoffer/seedster": "^3.0",
-        "laravelcollective/html": "^5.8"
+        "laravelcollective/html": "^6.1"
     },
     "autoload": {
         "psr-4": {
