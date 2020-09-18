@@ -495,7 +495,7 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/all-contri
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<img src="https://avatars0.githubusercontent.com/u/6244570?v=4" width="100px;" alt="Vildan Bina"/><br /><sub><b>Vildan Bina</b></sub>](http://bexvibi.github.io/)<br />[💻](https://github.com/bexvibi/laravel-blocker/commits?author=bexvibi "Code") |
+| [<sub><b>Vildan Bina</b></sub>](http://bexvibi.github.io/)<br />[💻](https://github.com/bexvibi/laravel-blocker/commits?author=bexvibi "Code") |
 | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
