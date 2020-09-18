@@ -20,8 +20,8 @@
     ],
     "require": {
         "php": ">=7.0.0",
-        "eklundkristoffer/seedster": "^3.0",
-        "laravelcollective/html": "^6.1"
+        "eklundkristoffer/seedster": "^4.0",
+        "laravelcollective/html": "^6.2"
     },
     "autoload": {
         "psr-4": {
