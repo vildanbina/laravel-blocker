@@ -1,11 +1,11 @@
 <?php
 
-namespace bexvibi\LaravelBlocker\App\Http\Controllers;
+namespace vildanbina\LaravelBlocker\App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use bexvibi\LaravelBlocker\App\Http\Requests\SearchBlockerRequest;
-use bexvibi\LaravelBlocker\App\Models\BlockedItem;
+use vildanbina\LaravelBlocker\App\Http\Requests\SearchBlockerRequest;
+use vildanbina\LaravelBlocker\App\Models\BlockedItem;
 
 class LaravelBlockerDeletedController extends LaravelBlockerController
 {

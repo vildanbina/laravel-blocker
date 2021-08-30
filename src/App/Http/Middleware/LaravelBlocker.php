@@ -1,8 +1,8 @@
 <?php
 
-namespace bexvibi\LaravelBlocker\App\Http\Middleware;
+namespace vildanbina\LaravelBlocker\App\Http\Middleware;
 
-use bexvibi\LaravelBlocker\App\Traits\LaravelCheckBlockedTrait;
+use vildanbina\LaravelBlocker\App\Traits\LaravelCheckBlockedTrait;
 use Closure;
 use Illuminate\Http\Request;
 

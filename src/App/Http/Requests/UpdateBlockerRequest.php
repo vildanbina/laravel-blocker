@@ -1,6 +1,6 @@
 <?php
 
-namespace bexvibi\LaravelBlocker\App\Http\Requests;
+namespace vildanbina\LaravelBlocker\App\Http\Requests;
 
 class UpdateBlockerRequest extends StoreBlockerRequest
 {

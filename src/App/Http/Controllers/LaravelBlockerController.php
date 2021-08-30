@@ -1,14 +1,14 @@
 <?php
 
-namespace bexvibi\LaravelBlocker\App\Http\Controllers;
+namespace vildanbina\LaravelBlocker\App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Response;
-use bexvibi\LaravelBlocker\App\Http\Requests\SearchBlockerRequest;
-use bexvibi\LaravelBlocker\App\Http\Requests\StoreBlockerRequest;
-use bexvibi\LaravelBlocker\App\Http\Requests\UpdateBlockerRequest;
-use bexvibi\LaravelBlocker\App\Models\BlockedItem;
-use bexvibi\LaravelBlocker\App\Models\BlockedType;
+use vildanbina\LaravelBlocker\App\Http\Requests\SearchBlockerRequest;
+use vildanbina\LaravelBlocker\App\Http\Requests\StoreBlockerRequest;
+use vildanbina\LaravelBlocker\App\Http\Requests\UpdateBlockerRequest;
+use vildanbina\LaravelBlocker\App\Models\BlockedItem;
+use vildanbina\LaravelBlocker\App\Models\BlockedType;
 
 class LaravelBlockerController extends Controller
 {

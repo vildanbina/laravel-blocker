@@ -1,9 +1,9 @@
 <?php
 
-namespace bexvibi\LaravelBlocker\Test;
+namespace vildanbina\LaravelBlocker\Test;
 
-use bexvibi\LaravelBlocker\LaravelBlockerFacade;
-use bexvibi\LaravelBlocker\LaravelBlockerServiceProvider;
+use vildanbina\LaravelBlocker\LaravelBlockerFacade;
+use vildanbina\LaravelBlocker\LaravelBlockerServiceProvider;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 
 class TestCase extends OrchestraTestCase
@@ -13,7 +13,7 @@ class TestCase extends OrchestraTestCase
      *
      * @param \Illuminate\Foundation\Application $app
      *
-     * @return bexvibi\LaravelBlocker\LaravelBlockerServiceProvider
+     * @return vildanbina\LaravelBlocker\LaravelBlockerServiceProvider
      */
     protected function getPackageProviders($app)
     {

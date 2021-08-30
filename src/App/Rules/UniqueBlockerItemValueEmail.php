@@ -1,9 +1,9 @@
 <?php
 
-namespace bexvibi\LaravelBlocker\App\Rules;
+namespace vildanbina\LaravelBlocker\App\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
-use bexvibi\LaravelBlocker\App\Models\BlockedType;
+use vildanbina\LaravelBlocker\App\Models\BlockedType;
 
 class UniqueBlockerItemValueEmail implements Rule
 {

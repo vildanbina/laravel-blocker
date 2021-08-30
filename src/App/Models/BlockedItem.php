@@ -1,6 +1,6 @@
 <?php
 
-namespace bexvibi\LaravelBlocker\App\Models;
+namespace vildanbina\LaravelBlocker\App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;

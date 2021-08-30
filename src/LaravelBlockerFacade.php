@@ -1,6 +1,6 @@
 <?php
 
-namespace bexvibi\LaravelBlocker;
+namespace vildanbina\LaravelBlocker;
 
 use Illuminate\Support\Facades\Facade;
 

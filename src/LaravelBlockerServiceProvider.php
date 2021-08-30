@@ -1,12 +1,12 @@
 <?php
 
-namespace bexvibi\LaravelBlocker;
+namespace vildanbina\LaravelBlocker;
 
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
-use bexvibi\LaravelBlocker\App\Http\Middleware\LaravelBlocker;
-use bexvibi\LaravelBlocker\Database\Seeds\DefaultBlockedItemsTableSeeder;
-use bexvibi\LaravelBlocker\Database\Seeds\DefaultBlockedTypeTableSeeder;
+use vildanbina\LaravelBlocker\App\Http\Middleware\LaravelBlocker;
+use vildanbina\LaravelBlocker\Database\Seeds\DefaultBlockedItemsTableSeeder;
+use vildanbina\LaravelBlocker\Database\Seeds\DefaultBlockedTypeTableSeeder;
 
 class LaravelBlockerServiceProvider extends ServiceProvider
 {
@@ -54,8 +54,8 @@ class LaravelBlockerServiceProvider extends ServiceProvider
      */
     private function packageRegistration()
     {
-        $this->app->make('bexvibi\LaravelBlocker\App\Http\Controllers\LaravelBlockerController');
-        $this->app->singleton(bexvibi\LaravelBlocker\App\Http\Controllers\LaravelBlockerController::class, function () {
+        $this->app->make('vildanbina\LaravelBlocker\App\Http\Controllers\LaravelBlockerController');
+        $this->app->singleton(vildanbina\LaravelBlocker\App\Http\Controllers\LaravelBlockerController::class, function () {
             return new App\Http\Controllers\LaravelBlockerController();
         });
         $this->app->alias(LaravelBlockerController::class, $this->_packageTag);

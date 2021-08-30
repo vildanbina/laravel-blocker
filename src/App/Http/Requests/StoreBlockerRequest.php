@@ -1,10 +1,10 @@
 <?php
 
-namespace bexvibi\LaravelBlocker\App\Http\Requests;
+namespace vildanbina\LaravelBlocker\App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Request;
-use bexvibi\LaravelBlocker\App\Rules\UniqueBlockerItemValueEmail;
+use vildanbina\LaravelBlocker\App\Rules\UniqueBlockerItemValueEmail;
 
 class StoreBlockerRequest extends FormRequest
 {

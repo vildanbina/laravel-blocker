@@ -1,6 +1,6 @@
 <?php
 
-namespace bexvibi\LaravelBlocker\App\Traits;
+namespace vildanbina\LaravelBlocker\App\Traits;
 
 trait IpAddressDetails
 {

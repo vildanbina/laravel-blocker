@@ -1,10 +1,10 @@
 <?php
 
-namespace bexvibi\LaravelBlocker\App\Traits;
+namespace vildanbina\LaravelBlocker\App\Traits;
 
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Request;
-use bexvibi\LaravelBlocker\App\Models\BlockedItem;
+use vildanbina\LaravelBlocker\App\Models\BlockedItem;
 
 trait LaravelCheckBlockedTrait
 {

@@ -1,13 +1,13 @@
 # Laravel Blocker
 
-[![Latest Stable Version](https://poser.pugx.org/bexvibi/laravel-blocker/v/stable.svg)](https://packagist.org/packages/bexvibi/laravel-blocker)
-[![Total Downloads](https://poser.pugx.org/bexvibi/laravel-blocker/d/total.svg)](https://packagist.org/packages/bexvibi/laravel-blocker)
-[![Travis-CI Build](https://travis-ci.org/bexvibi/laravel-blocker.svg?branch=master)](https://travis-ci.org/bexvibi/laravel-blocker)
+[![Latest Stable Version](https://poser.pugx.org/vildanbina/laravel-blocker/v/stable.svg)](https://packagist.org/packages/vildanbina/laravel-blocker)
+[![Total Downloads](https://poser.pugx.org/vildanbina/laravel-blocker/d/total.svg)](https://packagist.org/packages/vildanbina/laravel-blocker)
+[![Travis-CI Build](https://travis-ci.org/vildanbina/laravel-blocker.svg?branch=master)](https://travis-ci.org/vildanbina/laravel-blocker)
 [![StyleCI](https://github.styleci.io/repos/171390607/shield?branch=master)](https://github.styleci.io/repos/171390607)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/bexvibi/laravel-blocker/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/bexvibi/laravel-blocker/?branch=master)
-[![Latest Unstable Version](https://poser.pugx.org/bexvibi/laravel-blocker/v/unstable)](https://packagist.org/packages/bexvibi/laravel-blocker)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/vildanbina/laravel-blocker/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/vildanbina/laravel-blocker/?branch=master)
+[![Latest Unstable Version](https://poser.pugx.org/vildanbina/laravel-blocker/v/unstable)](https://packagist.org/packages/vildanbina/laravel-blocker)
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
-[![License](https://poser.pugx.org/bexvibi/laravel-blocker/license)](https://packagist.org/packages/bexvibi/laravel-blocker)
+[![License](https://poser.pugx.org/vildanbina/laravel-blocker/license)](https://packagist.org/packages/vildanbina/laravel-blocker)
 
 - [About](#about)
 - [Features](#features)
@@ -28,7 +28,7 @@
 Laravel Blocker (LaravelBlocker) is a middleware interface to block users, emails, ip addresses, domain names, cities, states, countries, continents, and regions from using your application, logging in, or registering. The types of items to be blocked can be extended to what you think via a seed. The items you are blocking have a CRUD interface along with a softdeletes interface.
 
 Can work out the box with or without the following roles packages:
-* [bexvibi/laravel-roles](https://github.com/bexvibi/laravel-roles)
+* [vildanbina/laravel-roles](https://github.com/vildanbina/laravel-roles)
 * [spatie/laravel-permission](https://github.com/spatie/laravel-permission)
 * [Zizaco/entrust](https://github.com/Zizaco/entrust)
 * [romanbican/roles](https://github.com/romanbican/roles)
@@ -66,13 +66,13 @@ Can work out the box with or without the following roles packages:
     Laravel 5.8+ use:
 
     ```bash
-        composer require bexvibi/laravel-blocker
+        composer require vildanbina/laravel-blocker
     ```
 
     Laravel 5.7 and below use:
 
     ```
-        composer require bexvibi/laravel-blocker:v1.0.6
+        composer require vildanbina/laravel-blocker:v1.0.6
     ```
 
 
@@ -87,7 +87,7 @@ Register the package with laravel in `config/app.php` under `providers` with the
 ```php
     'providers' => [
         Collective\Html\HtmlServiceProvider::class,
-        bexvibi\LaravelBlocker\LaravelBlockerServiceProvider::class,,
+        vildanbina\LaravelBlocker\LaravelBlockerServiceProvider::class,,
     ];
 ```
 
@@ -102,7 +102,7 @@ In `config/app.php` section under `aliases` with the following:
 
 #### Publish All Assets
 ```bash
-    php artisan vendor:publish --provider="bexvibi\LaravelBlocker\LaravelBlockerServiceProvider"
+    php artisan vendor:publish --provider="vildanbina\LaravelBlocker\LaravelBlockerServiceProvider"
 ```
 
 #### Publish Specific Assets
@@ -154,9 +154,9 @@ In `config/app.php` section under `aliases` with the following:
 ### Configuration
 There are many configurable options which have all been extended to be able to configured via `.env` file variables. Editing the configuration file directly is not needed becuase of this.
 
-* See config file: [laravelblocker.php](https://github.com/bexvibi/LaravelBlocker/blob/development/src/config/laravelblocker.php).
-* See default Types Seed: [DefaultBlockedTypeTableSeeder.php](https://github.com/bexvibi/LaravelBlocker/blob/development/src/database/seeds/DefaultBlockedTypeTableSeeder.php)
-* See default Blocked Items seed: [DefaultBlockedItemsTableSeeder.php](https://github.com/bexvibi/LaravelBlocker/blob/development/src/database/seeds/DefaultBlockedItemsTableSeeder.php)
+* See config file: [laravelblocker.php](https://github.com/vildanbina/LaravelBlocker/blob/development/src/config/laravelblocker.php).
+* See default Types Seed: [DefaultBlockedTypeTableSeeder.php](https://github.com/vildanbina/LaravelBlocker/blob/development/src/database/seeds/DefaultBlockedTypeTableSeeder.php)
+* See default Blocked Items seed: [DefaultBlockedItemsTableSeeder.php](https://github.com/vildanbina/LaravelBlocker/blob/development/src/database/seeds/DefaultBlockedItemsTableSeeder.php)
 
 ```php
 
@@ -361,21 +361,21 @@ LARAVEL_BLOCKER_DEFAULT_ACTION_REDIRECT='/'
 +--------+----------------------------------------+---------------------------------------+---------------------------------------------+---------------------------------------------------------------------------------------------------------+--------------------------------------------------------------+
 | Domain | Method                                 | URI                                   | Name                                        | Action                                                                                                  | Middleware                                                   |
 +--------+----------------------------------------+---------------------------------------+---------------------------------------------+---------------------------------------------------------------------------------------------------------+--------------------------------------------------------------+
-|        | GET|HEAD                               | blocker                               | laravelblocker::blocker.index               | bexvibi\LaravelBlocker\App\Http\Controllers\LaravelBlockerController@index                         | web,checkblocked,auth                                        |
-|        | POST                                   | blocker                               | laravelblocker::blocker.store               | bexvibi\LaravelBlocker\App\Http\Controllers\LaravelBlockerController@store                         | web,checkblocked,auth                                        |
-|        | GET|HEAD                               | blocker-deleted                       | laravelblocker::blocker-deleted             | bexvibi\LaravelBlocker\App\Http\Controllers\LaravelBlockerDeletedController@index                  | web,checkblocked,auth                                        |
-|        | DELETE                                 | blocker-deleted-destroy-all           | laravelblocker::destroy-all-blocked         | bexvibi\LaravelBlocker\App\Http\Controllers\LaravelBlockerDeletedController@destroyAllItems        | web,checkblocked,auth                                        |
-|        | POST                                   | blocker-deleted-restore-all           | laravelblocker::blocker-deleted-restore-all | bexvibi\LaravelBlocker\App\Http\Controllers\LaravelBlockerDeletedController@restoreAllBlockedItems | web,checkblocked,auth                                        |
-|        | DELETE                                 | blocker-deleted/{id}                  | laravelblocker::blocker-item-destroy        | bexvibi\LaravelBlocker\App\Http\Controllers\LaravelBlockerDeletedController@destroy                | web,checkblocked,auth                                        |
-|        | PUT                                    | blocker-deleted/{id}                  | laravelblocker::blocker-item-restore        | bexvibi\LaravelBlocker\App\Http\Controllers\LaravelBlockerDeletedController@restoreBlockedItem     | web,checkblocked,auth                                        |
-|        | GET|HEAD                               | blocker-deleted/{id}                  | laravelblocker::blocker-item-show-deleted   | bexvibi\LaravelBlocker\App\Http\Controllers\LaravelBlockerDeletedController@show                   | web,checkblocked,auth                                        |
-|        | GET|HEAD                               | blocker/create                        | laravelblocker::blocker.create              | bexvibi\LaravelBlocker\App\Http\Controllers\LaravelBlockerController@create                        | web,checkblocked,auth                                        |
-|        | DELETE                                 | blocker/{blocker}                     | laravelblocker::blocker.destroy             | bexvibi\LaravelBlocker\App\Http\Controllers\LaravelBlockerController@destroy                       | web,checkblocked,auth                                        |
-|        | PUT|PATCH                              | blocker/{blocker}                     | laravelblocker::blocker.update              | bexvibi\LaravelBlocker\App\Http\Controllers\LaravelBlockerController@update                        | web,checkblocked,auth                                        |
-|        | GET|HEAD                               | blocker/{blocker}                     | laravelblocker::blocker.show                | bexvibi\LaravelBlocker\App\Http\Controllers\LaravelBlockerController@show                          | web,checkblocked,auth                                        |
-|        | GET|HEAD                               | blocker/{blocker}/edit                | laravelblocker::blocker.edit                | bexvibi\LaravelBlocker\App\Http\Controllers\LaravelBlockerController@edit                          | web,checkblocked,auth                                        |
-|        | POST                                   | search-blocked                        | laravelblocker::search-blocked              | bexvibi\LaravelBlocker\App\Http\Controllers\LaravelBlockerController@search                        | web,checkblocked,auth                                        |
-|        | POST                                   | search-blocked-deleted                | laravelblocker::search-blocked-deleted      | bexvibi\LaravelBlocker\App\Http\Controllers\LaravelBlockerDeletedController@search                 | web,checkblocked,auth                                        |
+|        | GET|HEAD                               | blocker                               | laravelblocker::blocker.index               | vildanbina\LaravelBlocker\App\Http\Controllers\LaravelBlockerController@index                         | web,checkblocked,auth                                        |
+|        | POST                                   | blocker                               | laravelblocker::blocker.store               | vildanbina\LaravelBlocker\App\Http\Controllers\LaravelBlockerController@store                         | web,checkblocked,auth                                        |
+|        | GET|HEAD                               | blocker-deleted                       | laravelblocker::blocker-deleted             | vildanbina\LaravelBlocker\App\Http\Controllers\LaravelBlockerDeletedController@index                  | web,checkblocked,auth                                        |
+|        | DELETE                                 | blocker-deleted-destroy-all           | laravelblocker::destroy-all-blocked         | vildanbina\LaravelBlocker\App\Http\Controllers\LaravelBlockerDeletedController@destroyAllItems        | web,checkblocked,auth                                        |
+|        | POST                                   | blocker-deleted-restore-all           | laravelblocker::blocker-deleted-restore-all | vildanbina\LaravelBlocker\App\Http\Controllers\LaravelBlockerDeletedController@restoreAllBlockedItems | web,checkblocked,auth                                        |
+|        | DELETE                                 | blocker-deleted/{id}                  | laravelblocker::blocker-item-destroy        | vildanbina\LaravelBlocker\App\Http\Controllers\LaravelBlockerDeletedController@destroy                | web,checkblocked,auth                                        |
+|        | PUT                                    | blocker-deleted/{id}                  | laravelblocker::blocker-item-restore        | vildanbina\LaravelBlocker\App\Http\Controllers\LaravelBlockerDeletedController@restoreBlockedItem     | web,checkblocked,auth                                        |
+|        | GET|HEAD                               | blocker-deleted/{id}                  | laravelblocker::blocker-item-show-deleted   | vildanbina\LaravelBlocker\App\Http\Controllers\LaravelBlockerDeletedController@show                   | web,checkblocked,auth                                        |
+|        | GET|HEAD                               | blocker/create                        | laravelblocker::blocker.create              | vildanbina\LaravelBlocker\App\Http\Controllers\LaravelBlockerController@create                        | web,checkblocked,auth                                        |
+|        | DELETE                                 | blocker/{blocker}                     | laravelblocker::blocker.destroy             | vildanbina\LaravelBlocker\App\Http\Controllers\LaravelBlockerController@destroy                       | web,checkblocked,auth                                        |
+|        | PUT|PATCH                              | blocker/{blocker}                     | laravelblocker::blocker.update              | vildanbina\LaravelBlocker\App\Http\Controllers\LaravelBlockerController@update                        | web,checkblocked,auth                                        |
+|        | GET|HEAD                               | blocker/{blocker}                     | laravelblocker::blocker.show                | vildanbina\LaravelBlocker\App\Http\Controllers\LaravelBlockerController@show                          | web,checkblocked,auth                                        |
+|        | GET|HEAD                               | blocker/{blocker}/edit                | laravelblocker::blocker.edit                | vildanbina\LaravelBlocker\App\Http\Controllers\LaravelBlockerController@edit                          | web,checkblocked,auth                                        |
+|        | POST                                   | search-blocked                        | laravelblocker::search-blocked              | vildanbina\LaravelBlocker\App\Http\Controllers\LaravelBlockerController@search                        | web,checkblocked,auth                                        |
+|        | POST                                   | search-blocked-deleted                | laravelblocker::search-blocked-deleted      | vildanbina\LaravelBlocker\App\Http\Controllers\LaravelBlockerDeletedController@search                 | web,checkblocked,auth                                        |
 +--------+----------------------------------------+---------------------------------------+---------------------------------------------+---------------------------------------------------------------------------------------------------------+--------------------------------------------------------------+
 ```
 
@@ -495,7 +495,7 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/all-contri
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<sub><b>Vildan Bina</b></sub>](http://bexvibi.github.io/)<br />[💻](https://github.com/bexvibi/laravel-blocker/commits?author=bexvibi "Code") |
+| [<sub><b>Vildan Bina</b></sub>](http://vildanbina.github.io/)<br />[💻](https://github.com/vildanbina/laravel-blocker/commits?author=vildanbina "Code") |
 | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 

@@ -1,5 +1,5 @@
 {
-    "name": "bexvibi/laravel-blocker",
+    "name": "vildanbina/laravel-blocker",
     "description": "",
     "keywords": [
             "laravel blocker",
@@ -15,7 +15,7 @@
     "authors": [
         {
             "name": "Vildan Bina",
-            "email": "bexvibi@gmail.com"
+            "email": "vildanbina@gmail.com"
         }
     ],
     "require": {
@@ -25,13 +25,13 @@
     },
     "autoload": {
         "psr-4": {
-            "bexvibi\\LaravelBlocker\\": "src/"
+            "vildanbina\\LaravelBlocker\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "bexvibi\\LaravelBlocker\\LaravelBlockerServiceProvider"
+                "vildanbina\\LaravelBlocker\\LaravelBlockerServiceProvider"
             ]
         }
     },

@@ -1,6 +1,6 @@
 {
   "projectName": "laravel-blocker",
-  "projectOwner": "bexvibi",
+  "projectOwner": "vildanbina",
   "repoType": "github",
   "repoHost": "https://github.com",
   "files": [
@@ -10,10 +10,10 @@
   "commit": false,
   "contributors": [
     {
-      "login": "bexvibi",
+      "login": "vildanbina",
       "name": "Vildan Bina",
       "avatar_url": "https://avatars0.githubusercontent.com/u/6244570?v=4",
-      "profile": "http://bexvibi.github.io/",
+      "profile": "http://vildanbina.github.io/",
       "contributions": [
         "code"
       ]
